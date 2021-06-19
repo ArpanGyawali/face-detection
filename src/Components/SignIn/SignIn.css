@@ -1,0 +1,9 @@
+.inp {
+  background: linear-gradient(to right, #000000, #434343);
+  color: rgb(224, 216, 216);
+}
+
+.inp:focus {
+  background: transparent;
+  font-weight: bold;
+}

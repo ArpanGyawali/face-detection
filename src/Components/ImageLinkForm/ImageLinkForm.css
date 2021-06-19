@@ -1,0 +1,47 @@
+.detect {
+  background: transparent;
+  border-radius: 5px;
+  white-space: normal;
+  margin: 5px;
+  width: 10%;
+  height: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transition-duration: 0.7s;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.detect:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transform: scale(1.1);
+  box-shadow: 3px 3px 5px #20212f;
+  border: 3px solid #3b3535;
+}
+
+.custom {
+  background: linear-gradient(to right, #000000, #434343);
+  color: rgb(214, 206, 206);
+}
+
+.custom:focus {
+  color: rgb(0, 0, 0);
+  background: transparent;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .custom {
+    width: 50%;
+  }
+  .detect {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .detect {
+    font-size: 0.5em;
+  }
+}
