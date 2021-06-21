@@ -82,41 +82,11 @@ class App extends Component {
         bottom: height - boundary.bottom_row * height,
         right: width - boundary.right_col * width
       }
-      this.setState(prevstate => {
-        const box = prevstate.box.concat(boxobj);
-        return {
-          input: prevstate.input,
-          imgurl: prevstate.imgurl,
-          route: prevstate.route,
-          isSignIn: prevstate.isSignIn,
-          box: box,
-          user: prevstate.user
-        }
-      })
-    })
+      this.setState(prevstate => ({
+        box: [...prevstate.box, boxobj]
+      }))
     console.log(this.state.box)
   }
-
-  // calculateFaceBox = (data) => {
-  //   ///////////////////////////////////////
-  //   const region = data.outputs[0].data.regions
-  //   region.forEach(item => {
-  //     const boundary = item.region_info.bounding_box
-  //   })
-  //   const boundary = data.outputs[0].data.regions[0].region_info.bounding_box
-  //   const img = document.getElementById('image')
-  //   const width = Number(img.width)
-  //   const height = Number(img.height)
-  //   const boxobj = {
-  //     top: boundary.top_row * height,
-  //     left: boundary.left_col * width,
-  //     bottom: height - boundary.bottom_row * height,
-  //     right: width - boundary.right_col * width
-  //   }
-  //   this.setState({
-  //     box: boxobj
-  //   })
-  // }
 
   handleInput = (event) => {
     const {value} = event.target
